@@ -14,7 +14,7 @@ body {
 .sidebar {
     width: 270px;
     position: fixed;
-    margin: 16px;
+    margin: 10px;
     border-radius: 16px;
     background: rgb(255, 174, 0);
     height: calc(100vh - 32px);
@@ -98,6 +98,7 @@ body {
 .sidebar-nav .nav-link:hover {
     background: #FFF;
     color: #151A2D;
+
 }
   
 .sidebar-nav .nav-link .nav-label{
@@ -118,4 +119,21 @@ body {
     position: absolute;
     bottom: 30px;
     width: 100%;
+}
+
+.box-a{
+    width: 1055px;
+    height: 613px;
+    background: linear-gradient(white, rgb(223, 222, 215));
+    margin-left: 21.4%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 187, 0);;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, .2);
+}
+
+.box-a h2{
+    margin: 10px 0%;
+    margin-left: 10px;
+    font-size: 0px;
 }
