@@ -80,3 +80,25 @@ body{
     transition: .1s;
     transform: scale(1.02);
 }
+
+.box-wrapper{
+    position: relative;
+}
+
+.fa-eye-slash{
+    position: absolute;
+    font-size: 23px;
+    bottom: 30px;
+    right: 80px;
+    cursor: pointer;
+    color: rgb(202, 202, 202);
+}
+
+.fa-eye{
+    position: absolute;
+    font-size: 23px;
+    bottom: 30px;
+    right: 80px;
+    cursor: pointer;
+    color: rgb(212, 168, 21);
+}
