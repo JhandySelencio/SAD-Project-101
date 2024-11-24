@@ -18,7 +18,7 @@ body{
 
 .box-a{
     width: 480px;
-    height: 400px;
+    height: 420px;
     background-color: rgb(255, 255, 255);
     position: relative;
     margin: 7.2% auto;
@@ -62,7 +62,7 @@ body{
     margin: 0px 0%;
 }
 
-.box-a button{
+#inputButton{
     width: 330px;
     height: 60px;
     margin: 10px 0%;
@@ -76,7 +76,53 @@ body{
     font-size: 20px;
 }
 
-.box-a button:hover{
+#inputButton:hover{
     transition: .1s;
     transform: scale(1.02);
+}
+
+.alert {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    text-align: center;
+  }
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+.closebtn:hover {
+    color: black;
+  }
+
+.box-wrapper{
+    position: relative;
+}
+
+.fa-eye-slash{
+    position: absolute;
+    font-size: 23px;
+    bottom: 30px;
+    right: 80px;
+    cursor: pointer;
+    color: rgb(202, 202, 202);
+}
+
+.fa-eye{
+    position: absolute;
+    font-size: 23px;
+    bottom: 30px;
+    right: 80px;
+    cursor: pointer;
+    color: rgb(212, 168, 21);
 }
