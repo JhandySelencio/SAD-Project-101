@@ -416,7 +416,7 @@ body {
 .box-c{
     width: 90.3%;
     height: 552px;
-    display: block; /*change this*/
+    display: none; /*change this*/
     position: absolute;
     background-color: white;
     margin-left: 8.4%;
