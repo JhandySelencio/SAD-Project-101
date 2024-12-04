@@ -3,57 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Sidebar</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard-style.css">
     <!-- Linking Google font for icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
 </head>
 <body>
-   <aside class="sidebar">
+    <div class="title-bar" >
+        <i class="fa-solid fa-car" id="title-icon"></i>
+        <h2>Online Registration System For Vehicle Parking Tickets</h2>
+    </div>
+   <aside class="sidebar collapsed">
         <!-- Sidebar header -->
         <header class="sidebar-header">
             <a href="#" class="header-logo">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZJKubkH1v4O0WqRGbP3dN7Zg58VozoxswYg&s" alt="UC">
             </a>
             <button class="toggler sidebar-toggler">
-                <span class="material-symbols-rounded">chevron_left</span>
+                <span class="material-symbols-rounded" id="icon-id">chevron_left</span>
             </button>
         </header>
         <nav class="sidebar-nav">
             <!-- Primary top nav -->
             <ul class="nav-list primary-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="button-a">
                         <span class="nav-icon material-symbols-rounded">home</span>
                         <span class="nav-label">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="button-b">
                         <span class="nav-icon material-symbols-rounded">local_parking</span>
                         <span class="nav-label">Parking Ticket</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <span class="nav-icon material-symbols-rounded">description</span>
-                        <span class="nav-label">Generate Report</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="button-c">
                         <span class="nav-icon material-symbols-rounded">account_circle</span>
                         <span class="nav-label">My Account</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <span class="nav-icon material-symbols-rounded">settings</span>
-                        <span class="nav-label">Settings</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="login-page.html" class="nav-link">
+                    <a href="login-page.php" class="nav-link" >
                         <span class="nav-icon material-symbols-rounded">logout</span>
                         <span class="nav-label">Logout</span>
                     </a>
@@ -61,12 +54,81 @@
             </ul>
         </nav>
    </aside>
-   <div class="box-a">
-    <h2>Dashboard</h2>
+   <div class="box-a" id="dashboard-page">
+     <h2>Dashboard</h2>
+        <div class="box-displayer" id="default-display">
+            <h1 id="notice-text">There are currently no active <br> parking tickets right now. <br> Go to Parking Ticket page <br> to create one.</h1>
+        </div>
    </div>
-   <div class="box-a">
-    <h2>Dashboard</h2>
+   <div class="box-b" id="ticket-page">
+     <h2>Parking Tickets</h2>
+     <button id="create-button">Create Ticket</button>
+     <div class="create-ticket-page" id="create-ticket-ui">
+         <h3 id="heading">Creating Ticket</h3>
+         <hr>
+         <div class="ticket-details">
+            <div class="detail">
+                <span class="label">Date:</span>
+                <span class="value">December 4, 2024</span>
+            </div>
+            <div class="detail">
+                <span class="label">Expiration Date:</span>
+                <span class="value">December 11, 2025</span>
+            </div>
+            <div class="detail">
+                <span class="label">Status:</span>
+                <span class="value">Active</span>
+            </div>
+            <div class="detail">
+                <span class="label">Ticket ID:</span>
+                <span class="value">12345ABC</span>
+            </div>
+            <button id="cancel-button">Cancel</button>
+            <button id="submit-button">Submit</button>
+            <button id="close-button">Close</button>
+         </div>
+     </div>
+     <div class="box-displayer" id="main-display-ticket">
+        <div class="show-ticket" id="display-ticket">
+            <a href="#" id="show-ticket-btn">
+                <h3>Ticket #01</h3>
+                <i class="fa-solid fa-circle" id="status"></i>
+              <div class="detail" id="adjust">
+                 <span class="label">Date Created:</span>
+                    <span class="value">12/4/2024</span>
+              </div>
+             <div class="detail" id="adjust">
+                 <span class="label">Ticket ID:</span>
+                 <span class="value">12345ABC</span>
+             </div>
+            </a>
+        </div>
+     </div>
    </div>
+   <div class="box-c" id="account-page">
+    <h2>My Account</h2>
+    <div class="box-displayer">
+        <h3>Your Vehicle Information</h3>
+        <div class="form-group">
+            <label for="type">Type of Vehicle:</label>
+            <input type="text" id="type" name="type" placeholder="Enter vehicle type">
+            <span id="displayType">Noting yet</span>
+        </div>
+        <div class="form-group">
+            <label for="plate">Plate Number:</label>
+            <input type="text" id="plate" name="plate" placeholder="Enter plate number">
+            <span id="displayPlate">Noting yet</span>
+        </div>
+        <div class="form-group">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" placeholder="Enter vehicle model">
+            <span id="displayModel">Noting yet</span>
+        </div>
+        <button class="vehicle-info-button" id="submit-vehicle-info">Submit</button>
+        <button class="vehicle-info-button" id="update-vehicle-info">Update</button>
+        <button class="vehicle-info-button" id="cancel-vehicle-info">Cancel</button>
+    </div>
+  </div>
 
    <script src="dashboard-script.js"></script>
 </body>
