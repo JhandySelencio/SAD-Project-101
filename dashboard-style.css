@@ -7,18 +7,43 @@
   
 body {
     min-height: 100vh;
-    /*background: linear-gradient(#F1FAFF, #CBE4FF); color*/
-    background-color: #FFF9DB;
+    background-color: #6babff;
 }
-  
+ 
+.title-bar{
+    height: 70px;
+    width: 100%;
+    background-color: #0063ff;
+    margin-top: -10px;
+    padding: 23px;
+    padding-left: 3%;
+    position: fixed;
+}
+
+.title-bar h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+#title-icon{
+    position: absolute;
+    margin-left: -33.5px;
+    margin-top: 3.5px;
+    font-size: 27px;
+    color: white;
+}
+
 .sidebar {
-    width: 270px;
+    width: 225px;
     position: fixed;
     margin: 10px;
+    z-index: 2;
+    margin-top: 70px;
     border-radius: 16px;
-    background: rgb(255, 174, 0);
-    height: calc(100vh - 32px);
-    transition: width 0.4s ease; 
+    background: #0063ff;
+    height: calc(90vh - 25px);
+    transition: width 0.3s ease; 
 }
   
   
@@ -51,7 +76,7 @@ body {
     right: 20px;
     height: 35px;
     width: 35px;
-    color: rgb(255, 187, 0);
+    color: #0063ff;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -97,7 +122,7 @@ body {
   
 .sidebar-nav .nav-link:hover {
     background: #FFF;
-    color: #151A2D;
+    color: #0063ff;
 
 }
   
@@ -122,19 +147,340 @@ body {
 }
 
 .box-a{
-    width: 1055px;
-    height: 613px;
-    background: linear-gradient(white, rgb(223, 222, 215));
-    margin-left: 21.4%;
-    margin-top: 10px;
+    width: 90.3%;
+    height: 552px;
+    display: block; /*change this*/
+    position: absolute;
+    background-color: white;
+    margin-left: 8.4%;
+    margin-top: 5.3%;
     border-radius: 10px;
-    border: 3px solid rgb(255, 187, 0);;
-    box-shadow: 4px 8px 10px rgba(0, 0, 0, .2);
+    z-index: 1;
+    box-shadow: 4px 8px 10px rgba(23, 16, 97, .2);
 }
 
 .box-a h2{
-    margin: 10px 0%;
-    margin-left: 10px;
-    font-size: 0px;
+    margin: 15px 0%;
+    margin-left: 30px;
+    font-size: 40px;
+    color: #0063ff;
 }
 
+.box-b{
+    width: 90.3%;
+    height: 552px;
+    display: none; /*change this*/
+    position: absolute;
+    background-color: white;
+    margin-left: 8.4%;
+    margin-top: 5.3%;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 4px 8px 10px rgba(23, 16, 97, .2);
+}
+
+.box-b h2{
+    margin: 15px 0%;
+    margin-left: 30px;
+    font-size: 40px;
+    color: #0063ff;
+}
+
+#create-button{
+    height: 50px;
+    width: 190px;
+    display: block;
+    margin-left: 83.2%;
+    margin-top: -5%;
+    background-color: #0063ff;;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    border: 2px solid transparent;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, .1);
+}
+
+#create-button:hover{
+    border: 2px solid #0063ff;
+    background-color: white;
+    color: #0063ff;
+    transform: scale(1.02);
+}
+
+#plus-icon{
+    position: absolute;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 10px;
+    left: 2px;
+}
+
+/*Lusing Extension*/
+.create-ticket-page{
+    width: 400px;
+    margin-left: 32.5%;
+    margin-top: 5%;
+    padding: 20px;
+    display: none;
+    position: absolute;
+    background-color: white; 
+    border: 2px solid #0063ff;
+    color: #0063ff;
+    z-index: 2;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.create-ticket-page h3{
+    color: #0063ff;
+}
+  
+.create-ticket-page hr {
+    border: none;
+    border-top: 2px dashed #0063ff;
+    margin: 10px 0;
+}
+
+.create-ticket-page button{
+    height: 30px;
+    width: 150px;
+    display: block;
+    background-color: #0063ff;;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, .1);
+}
+
+.create-ticket-page button:hover{
+    border: 2px solid #0063ff;
+    background-color: white;
+    color: #0063ff;
+    transform: scale(1.02);
+}
+
+#cancel-button{
+    margin-left: 0%;
+    margin-top: 5%;
+}
+
+#submit-button{
+    margin-left: 59%;
+    margin-top: -8.4%;
+}
+
+#close-button{
+    margin-left: 30%;
+    display: block;
+}
+
+.ticket-details {
+    text-align: left; 
+    margin: 20px 0;
+}
+  
+.detail {
+    display: grid;
+    grid-template-columns: 100px 1fr; 
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #0063ff;
+    font-weight: none;
+    font-size: 20px;
+}
+
+.form-group input{
+    margin-left: 20px;
+    margin-bottom: 17px;
+}
+
+.box-displayer h3{
+    color: #0063ff;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.box-displayer input[type="text"] {
+    width: 300px;
+    padding: 7px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    top: 100px;
+    margin-top: 20px;
+
+}
+
+.image-upload {
+    position: absolute;
+    top: 100px; 
+    right: 40px;
+    text-align: center;
+    width: 140px;
+}
+  
+.label {
+    font-weight: bold;
+}
+  
+.value {
+    text-align: right; 
+}
+
+.box-displayer{
+    height: 440px;
+    width: 94.7%;
+    margin-top: 18px;
+    margin-left: 30px;
+    background-color: rgb(229, 232, 240);
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.box-displayer h1{
+    font-size: 38px;
+    margin: 120px;
+    color: #0063ff;
+    text-align: center;
+}
+
+.show-ticket{
+    height: 180px;
+    width: 250px;
+    background-color: white;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    border: 3px solid #0063ff;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, .2);
+}
+
+.show-ticket a{
+    outline: none;
+    text-decoration: none;
+    color: #0063ff;
+}
+
+.show-ticket:hover{
+    background-color: white;
+    color: #0063ff;
+    transform: scale(1.02);
+    text-decoration: none;
+    outline: none;
+}
+
+#status{
+    position: absolute;
+    color: #39FF14;
+    font-size: 20px;
+    margin-top: -35px;
+    margin-left: 92px;
+}
+
+#adjust{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.show-ticket h3{
+    color: white;
+    text-align: center;
+    background-color: #0063ff;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.box-c{
+    width: 90.3%;
+    height: 552px;
+    display: block; /*change this*/
+    position: absolute;
+    background-color: white;
+    margin-left: 8.4%;
+    margin-top: 5.3%;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 4px 8px 10px rgba(23, 16, 97, .2);
+}
+
+.vehicle-info-button{
+    height: 30px;
+    width: 150px;
+    display: block;
+    background-color: #0063ff;;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, .1);
+}
+
+.vehicle-info-button:hover{
+    border: 2px solid #0063ff;
+    background-color: white;
+    color: #0063ff;
+    transform: scale(1.02);
+}
+
+.box-c h2{
+    margin: 15px 0%;
+    margin-left: 30px;
+    font-size: 40px;
+    color: #0063ff;
+}
+
+.form-group span{
+    font-weight: bold;
+    display: none;
+    margin-left: 10px;
+}
+
+#submit-vehicle-info{
+    margin-left: 331px;
+}
+
+#update-vehicle-info{
+    display: none;
+    margin-left: 331px;
+}
+
+#cancel-vehicle-info{
+    display: none;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+#plate{
+    width: 313px;
+}
+
+#model{
+    width: 381px;
+}
