@@ -58,6 +58,20 @@
      <h2>Dashboard</h2>
         <div class="box-displayer" id="default-display">
             <h1 id="notice-text">There are currently no active <br> parking tickets right now. <br> Go to Parking Ticket page <br> to create one.</h1>
+            <div class="show-ticket" id="display-ticket2" id>
+                <a href="#" id="show-ticket-btn2">
+                    <h3>Ticket #01</h3>
+                    <i class="fa-solid fa-circle" id="status"></i>
+                  <div class="detail" id="adjust">
+                     <span class="label">Date Created:</span>
+                        <span class="value">12/4/2024</span>
+                  </div>
+                 <div class="detail" id="adjust">
+                     <span class="label">Ticket ID:</span>
+                     <span class="value">12345ABC</span>
+                 </div>
+                </a>
+            </div>
         </div>
    </div>
    <div class="box-b" id="ticket-page">
@@ -112,17 +126,17 @@
         <div class="form-group">
             <label for="type">Type of Vehicle:</label>
             <input type="text" id="type" name="type" placeholder="Enter vehicle type">
-            <span id="displayType">Noting yet</span>
+            <span id="displayType">null</span>
         </div>
         <div class="form-group">
             <label for="plate">Plate Number:</label>
             <input type="text" id="plate" name="plate" placeholder="Enter plate number">
-            <span id="displayPlate">Noting yet</span>
+            <span id="displayPlate">null</span>
         </div>
         <div class="form-group">
             <label for="model">Model:</label>
             <input type="text" id="model" name="model" placeholder="Enter vehicle model">
-            <span id="displayModel">Noting yet</span>
+            <span id="displayModel">null</span>
         </div>
         <button class="vehicle-info-button" id="submit-vehicle-info">Submit</button>
         <button class="vehicle-info-button" id="update-vehicle-info">Update</button>
