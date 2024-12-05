@@ -14,12 +14,14 @@ const createTicket = document.getElementById("create-button");
 const displayCreateTicket = document.getElementById("create-ticket-ui");
 
 const showTicket = document.getElementById("display-ticket");
+const showTicket2 = document.getElementById("display-ticket2");
 const headingText = document.getElementById("heading");
 
 const submitBTN = document.getElementById("submit-button");
 const cancelBTN = document.getElementById("cancel-button");
 const closeBTN = document.getElementById("close-button");
 const showTicketBTN = document.getElementById("show-ticket-btn");
+const showTicketBTN2 = document.getElementById("show-ticket-btn2");
 
 const displayTicketBox = document.getElementById("show-to-dashboard");
 const displayToDefaultBox = document.getElementById("default-display");
@@ -75,11 +77,20 @@ cancelBTN.addEventListener("click", () => {
 submitBTN.addEventListener("click", () =>{
     displayCreateTicket.style.display = "none";
     showTicket.style.display = "block"; 
+    showTicket2.style.display = "block"
     headingNoticeText.textContent = "";
     createTicket.disabled = true;
 });
 
 showTicketBTN.addEventListener("click", () =>{
+    headingText.textContent = "Ticket #01";
+    displayCreateTicket.style.display = "block";
+    submitBTN.style.display = "none"; 
+    cancelBTN.style.display = "none"; 
+    closeBTN.style.display = "block";
+});
+
+showTicketBTN2.addEventListener("click", () =>{
     headingText.textContent = "Ticket #01";
     displayCreateTicket.style.display = "block";
     submitBTN.style.display = "none"; 
